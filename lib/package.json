@@ -1,0 +1,29 @@
+{
+  "$schema": "../../node_modules/ng-packagr/package.schema.json",
+  "name": "angular-dual-selector",
+  "description": "Extremely Simple Angular 7+ Dual Selector Component",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jvb93/angular-dual-selector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jvb93/angular-dual-selector/issues"
+  },
+  "author": "jvb93",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "selector"
+  ],
+  "peerDependencies": {
+    "@angular/core": ">=7.2.0",
+    "@angular/forms": ">=7.2.0"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "index.ts"
+    },
+    "dest": "dist"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "angular-dual-selector",
+  "description": "Extremely Simple Angular 7+ Dual Selector Component",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jvb93/angular-dual-selector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jvb93/angular-dual-selector/issues"
+  },
+  "author": "jvb93",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run clean && npm run dist && tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "clean": "rimraf runt dist",
+    "dist": "ng-packagr -p lib/package.json && cp README.md LICENSE dist",
+    "lint": "tslint -c tslint.json -t verbose lib/**/*.ts app/**/*.ts",
+    "lite": "lite-server"
+  },
+  "main": "angular-dual-selector.bundle.js",
+  "module": "angular-dual-selector.module.js",
+  "types": "index.d.ts",
+  "keywords": [
+    "angular",
+    "selector"
+  ],
+  "peerDependencies": {
+    "@angular/core": ">=7.2.0",
+    "@angular/forms": ">=7.2.0"
+  },
+  "devDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/compiler": "^7.2.0",
+    "@angular/compiler-cli": "^7.2.0",
+    "@angular/core": "^7.2.0",
+    "@angular/forms": "^7.2.0",
+    "@angular/platform-browser": "^7.2.0",
+    "@angular/platform-browser-dynamic": "^7.2.0",
+    "@types/core-js": "^0.9.43",
+    "@types/node": "^9.4.0",
+    "bootstrap": "^3.3.7",
+    "concurrently": "^2.2.0",
+    "core-js": "^2.5.1",
+    "cp": "^0.2.0",
+    "lite-server": "^2.3.0",
+    "ng-packagr": "^1.6.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.51.1",
+    "rxjs": "^5.2.0",
+    "systemjs": "0.19.47",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
+    "zone.js": "^0.8.18"
+  }
+}

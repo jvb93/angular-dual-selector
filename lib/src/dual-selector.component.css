@@ -1,0 +1,25 @@
+@media (min-width: 768px) {
+    .row.equal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.center-vertical {
+    display: flex; 
+    justify-content: center;
+}
+
+.list-item {
+    transition: all 0.125s ease;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+
+}
+
+.list-item.active {
+    background-color: #337ab7;
+    color: white;
+    border-bottom: 1px solid #2e6da4;
+
+}

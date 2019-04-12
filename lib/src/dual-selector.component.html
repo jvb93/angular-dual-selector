@@ -1,0 +1,38 @@
+<div class="row equal">
+  <div class="col-md-5">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        {{availableHeading}}
+      </div>
+      <div class="panel-body" [ngStyle]="panelStyle()">
+        <div [ngClass]="{'active': i == highlightAvailableItem, 'list-item' : true }" *ngFor="let item of availableItems; let i = index" (click)="highlightItem(i,false);">
+            {{item.text}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2" class="center-vertical">
+    <div style="align-self:center;">
+      <button type="button" class="btn btn-default btn-block" (click)="addSelectedItem();"
+        [disabled]="highlightAvailableItem == -1">
+        Add
+      </button>
+      <button type="button" class="btn btn-primary btn-block" (click)="removeSelectedItem();"
+        [disabled]="highlightSelectedItem == -1">
+        Remove
+      </button>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        {{selectedHeading}}
+      </div>
+      <div class="panel-body" [ngStyle]="panelStyle()">
+          <div [ngClass]="{'active': i == highlightSelectedItem, 'list-item' : true }" *ngFor="let item of selectedItems; let i = index" (click)="highlightItem(i,true)">
+              {{item.text}}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
